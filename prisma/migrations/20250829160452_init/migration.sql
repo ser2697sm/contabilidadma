@@ -1,0 +1,18 @@
+-- AlterTable
+ALTER TABLE `nacionalidadesopcion` MODIFY `nombre` VARCHAR(191) NULL,
+    MODIFY `primer_apellido` VARCHAR(191) NULL,
+    MODIFY `segundo_apellido` VARCHAR(191) NULL,
+    MODIFY `telefono` VARCHAR(191) NULL,
+    MODIFY `nacionalidad` VARCHAR(191) NULL,
+    MODIFY `progrenitor` VARCHAR(191) NULL,
+    MODIFY `datos_hijos` VARCHAR(191) NULL,
+    MODIFY `nif` VARCHAR(191) NULL,
+    MODIFY `lugar` VARCHAR(191) NULL,
+    MODIFY `consultado` VARCHAR(191) NULL,
+    MODIFY `enviado` BOOLEAN NULL,
+    MODIFY `saldo` INTEGER NULL,
+    MODIFY `primer_pago` INTEGER NULL,
+    MODIFY `segundo_pago` INTEGER NULL,
+    MODIFY `tercer_pago` INTEGER NULL,
+    MODIFY `saldo_restante` INTEGER NULL,
+    MODIFY `notas` VARCHAR(191) NULL;

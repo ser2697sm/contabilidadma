@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+ // output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Nacionalidades {
+  id                Int     @id @default(autoincrement())
+  nombre            String? 
+  primer_apellido   String?
+  segundo_apellido  String?
+  nacionalidad      String?
+  n_expediente      String?
+  n_documento       String?
+  fecha_examen      String?
+  fecha_presentacion String?
+  donde_vive        String?
+  telefono          String?
+  estado            String?
+  consulta          String?
+  pago_total        Int?
+  primer_pago       Int?
+  segundo_pago      Int?
+  tercer_pago       Int?
+  saldo             Int?
+  notas             String?
+}
+
+model NacionalidadesOpcion {
+  id Int @id @default(autoincrement())
+  nombre String?
+  primer_apellido String?
+  segundo_apellido String?
+  telefono String?
+  nacionalidad String?
+  progrenitor String?
+  datos_hijos String?
+  nif String?
+  lugar String?
+  consultado String?
+  enviado Boolean?
+  saldo Int?
+  primer_pago Int?
+  segundo_pago Int?
+  tercer_pago Int?
+  saldo_restante Int?
+  notas String?
+}
+
+model Arraigados {
+  id Int @id @default(autoincrement())
+  nombre String?
+  primer_apellido String?
+  segundo_apellido String?
+  telefono String?
+  nacionalidad String?
+  tipo_arraigado String?
+  persona__arraigado String?
+  lugar String?
+  n_expediente String?
+  fecha_presentacion String?
+  saldo Int?
+  primer_pago Int?
+  segundo_pago Int?
+  tercer_pago Int?
+  saldo_restante Int?
+  notas String?
+}
+
+model Renovaciones {
+  id Int @id @default(autoincrement())
+  nombre String?
+  primer_apellido String?
+  segundo_apellido String?
+  telefono String?
+  nacionalidad String?
+  renovacion String?
+  n_expediente String?
+  fecha_presentacion String?
+  saldo Int?
+  primer_pago Int?
+  segundo_pago Int?
+  tercer_pago Int?
+  saldo_restante Int?
+  notas String?
+}
+
+model Reagrupaciones {
+  id Int @id @default(autoincrement())
+  nombre String?
+  primer_apellido String?
+  segundo_apellido String?
+  telefono String?
+  nacionalidad String?
+  tipo_reagrupacion String?
+  persona_reagrupacion String?
+  lugar String?
+  n_expediente String?
+  fecha_presentacion String?
+  saldo Int?
+  primer_pago Int?
+  segundo_pago Int?
+  tercer_pago Int?
+  saldo_restante Int?
+  notas String?
+}
+
+model TarjetaComunitaria {
+  id Int @id @default(autoincrement())
+  nombre String?
+  primer_apellido String?
+  segundo_apellido String?
+  telefono String?
+  nacionalidad String?
+  persona_reagrupacion String?
+  n_expediente String?
+  fecha_presentacion String?
+  saldo Int?
+  primer_pago Int?
+  segundo_pago Int?
+  tercer_pago Int?
+  saldo_restante Int?
+  notas String?
+}
