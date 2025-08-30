@@ -8,6 +8,9 @@
     "start": "next start",
     "deploy": "npm run build && npm run start",
     "lint": "eslint"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "deploy": "npm run prisma:generate && npm run prisma:migrate && npm run build && npm run start"
   },
   "dependencies": {
     "@prisma/client": "^6.15.0",
